@@ -9,13 +9,19 @@ app.set("view engine", "handlebars");
 app.use(express.static("public"))
 
 app.get("/", (req, res) => {
-    res.render("home")
+    res.render("home", {
+        isActiveHome: true
+    })
 })
 app.get("/contact", (req, res) => {
-    res.render("contact")
+    res.render("contact", {
+        isActiveContact: true
+    })
 })
 app.get("/team", (req, res) => {
-    res.render("team")
+    res.render("team", {
+        isActiveTeam: true
+    })
 })
 
 app.listen(port, () => {
