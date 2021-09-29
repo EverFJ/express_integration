@@ -17,16 +17,22 @@
   >
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link normal-title active" href="/">Accueil</a>
+        <a class="nav-link normal-title 
+        {{#if isActiveHome}} active {{/if }}
+        " href="/">Accueil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link normal-title" href="/team">Equipe</a>
+        <a class="nav-link normal-title
+        {{#if isActiveTeam}} active {{/if }}
+        " href="/team">Equipe</a>
       </li>
       <li class="nav-item">
         <a class="nav-link normal-title" href="#">Blog</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link normal-title" href="/contact">Contact</a>
+        <a class="nav-link normal-title
+        {{#if isActiveContact}} active {{/if }}
+        " href="/contact">Contact</a>
       </li>
     </ul>
   </div>
