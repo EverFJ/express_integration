@@ -10,17 +10,20 @@ app.use(express.static("public"))
 
 app.get("/", (req, res) => {
     res.render("home", {
-        isActiveHome: true
+        isActiveHome: true,
+        customCss: "css/homepage.css"
     })
 })
 app.get("/contact", (req, res) => {
     res.render("contact", {
-        isActiveContact: true
+        isActiveContact: true,
+        customCss: "css/contact.css"
     })
 })
 app.get("/team", (req, res) => {
     res.render("team", {
-        isActiveTeam: true
+        isActiveTeam: true,
+        customCss: "css/team.css"
     })
 })
 
